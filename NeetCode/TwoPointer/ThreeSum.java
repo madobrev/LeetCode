@@ -30,20 +30,20 @@ public class ThreeSum {
 
     public List<List<Integer>> twoSum(int[] nums, int target) {
 
-        HashMap<Integer, Integer> numToIndex = new HashMap<>();
+        HashMap<Integer, Integer> targetToCurrent = new HashMap<>();
         List<List<Integer>> result = new ArrayList<>();
 
         for (int i = 0; i < nums.length; i++) {
             int currentNumber = nums[i];
             int soughtNumber = target - currentNumber;
 
-            if (numToIndex.containsKey(soughtNumber)) {
+            if (targetToCurrent.containsKey(soughtNumber)) {
                 List<Integer> foundPair = new ArrayList<>();
-                foundPair.add(nums[numToIndex.get(soughtNumber)]);
+                foundPair.add(nums[targetToCurrent.get(soughtNumber)]);
                 foundPair.add(currentNumber);
                 result.add(foundPair);
             }
-            numToIndex.put(currentNumber, i);
+            targetToCurrent.put(currentNumber, i);
         }
 
         return result;
