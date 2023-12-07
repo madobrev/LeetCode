@@ -1,7 +1,7 @@
 package DailyChallenges.December2023;
 
 public class LargestOddNumberInString07_12 {
-    public static String largestOddNumber(String num) {
+    public String largestOddNumber(String num) {
 
         int right = num.length() - 1;
 
@@ -17,9 +17,4 @@ public class LargestOddNumberInString07_12 {
 
     }
 
-    public static void main(String[] args) {
-        String a = "52";
-
-        System.out.println(largestOddNumber(a));
-    }
 }
